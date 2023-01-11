@@ -1,0 +1,22 @@
+##FOR Negative index to find my findings
+tuple1=("Rahul",100,10.2)
+tuple1[0]
+'Rahul'
+tuple1=("Rahul",100,10.2)
+tuple1[-1]
+10.2
+tuple1[-2]
+100
+tuple1=("Rahul",100,10.2)
+tuple1[0]
+'Rahul'
+tuple1=("Rahul",100,10.2)
+tuple1[-1]
+10.2
+tuple1[-2]
+100
+tuple1[-3]
+'Rahul'
+tuple2 = tuple1 + ("Bd",50,25.2)
+print(tuple2)
+('Rahul', 100, 10.2, 'Bd', 50, 25.2)
