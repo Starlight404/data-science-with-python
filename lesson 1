@@ -1,0 +1,42 @@
+type(21)
+<class 'int'>
+type(21.02123)
+<class 'float'>
+type("dtjsha")
+<class 'str'>
+int(2.0)
+2
+float(22)
+22.0
+int(True)
+1
+int(False)
+0
+bool(1)
+True
+bool(0)
+False
+
+############
+# num1 = input("enter your name: ")
+# num2 = input("enter your age: ")
+#
+#
+# print("num1 + num2 = ", num1+num2)
+
+
+
+nam =  " I am the best\t"##\n for new line \t for tab
+x = nam + " i can do anything"
+b = x.upper() #for upper case
+print(b)
+
+nam =  " I am the best\t"##\n for new line \t for tab
+x = nam + " i can do anything"
+b = x.find("t") #to find the index value
+print(b)
+
+
+expression and varriables
+
+
