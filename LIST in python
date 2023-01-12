@@ -1,0 +1,73 @@
+################ LISTS ARE also ordered sequence####################
+## IT starts with []
+
+
+
+L = ["rahul",10.22,2550,]
+L[1]
+10.22
+L[0]
+'rahul'
+L[0][0:2]
+'ra'
+
+L = ["rahul",10.22,2550,"MJ",1]
+L[1]
+10.22
+L[3]
+'MJ'
+L[3:5]
+['MJ', 1]
+L[3][0]
+'M'
+L = ["rahul",10.22,2550,"MJ",1]
+L1 = ["DHAKA",100,5200]+ L
+L1
+['DHAKA', 100, 5200, 'rahul', 10.22, 2550, 'MJ', 1]
+L1.extend(["KOLKATA",4118])
+L1
+['DHAKA', 100, 5200, 'rahul', 10.22, 2550, 'MJ', 1, 'KOLKATA', 4118]
+L1[0] = "KOREA"
+L1
+['KOREA', 100, 5200, 'rahul', 10.22, 2550, 'MJ', 1, 'KOLKATA', 4118]
+L1[1] = "Chennai"
+L1
+['KOREA', 'Chennai', 5200, 'rahul', 10.22, 2550, 'MJ', 1, 'KOLKATA', 4118]
+del(L1[1])
+L1
+['KOREA', 5200, 'rahul', 10.22, 2550, 'MJ', 1, 'KOLKATA', 4118]
+"KOREA".split()
+['KOREA']
+L1[0] = "KOREA SCORES"
+L1
+['KOREA SCORES', 5200, 'rahul', 10.22, 2550, 'MJ', 1, 'KOLKATA', 4118]
+"KOREA SCORES".split()
+['KOREA', 'SCORES']
+"A,B,C,D" .split(",")
+['A', 'B', 'C', 'D']
+a = ["hard rock", 10,15]
+b = a
+b
+['hard rock', 10, 15]
+b[0]
+'hard rock'
+b[0] = "Banana"
+b[0]
+'Banana'
+b
+['Banana', 10, 15]
+a = ["hard rock", 10,15]
+b = a[:]
+b
+['hard rock', 10, 15]
+a = (0,1,2,3)
+a[3]
+3
+a[1]
+1
+B=["a","b","c"]
+b[1:]
+[10, 15]
+B=["a","b","c"]
+B[1:]
+['b', 'c']
