@@ -1,0 +1,39 @@
+Sets are type of collection 
+This is unordered tuples
+Sets do not record postion
+Sets only have unique elements 
+this means only one element in a set
+set1 = ["rock", "pink floyd", "pink floyd", 1999]
+
+set1 = set(set1)
+set1
+{'rock', 'pink floyd', 1999}
+### set operations##
+
+a = {"bsb", "pink floyd", "westlife", "one direction"}
+a.add("kpop")
+a
+{'kpop', 'pink floyd', 'bsb', 'one direction', 'westlife'}
+a.remove("pink floyd")
+a
+{'kpop', 'bsb', 'one direction', 'westlife'}
+"kpop" in a
+True
+"pink floyd" in a
+False
+set1 = {"bsb", "pink floyd", "westlife", "one direction"}
+set2 = {"kpop", "westlife", "one direction"}
+
+set3 = set1 & set2
+set3
+{'one direction', 'westlife'}
+set1.union(set2)
+{'one direction', 'kpop', 'westlife', 'pink floyd', 'bsb'}
+set1 = {"bsb", "pink floyd", "westlife", "one direction"}
+set2 = {"kpop", "westlife", "one direction"}
+set2.issubset(set1)
+False
+
+
+set3.issubset(set1)
+True
