@@ -1,0 +1,34 @@
+##dictionaris are denoted with curly brackets {}
+##the keys to be immutable and unique
+## the values can be immutable, mutable,and duplicates
+
+Dic = {"bsb":1990, "westlift":2000, "pink floyd":1995}
+Dic
+{'bsb': 1990, 'westlift': 2000, 'pink floyd': 1995}
+Dic["bsb"]
+1990
+Dic["atif islam"] = "2017"
+Dic
+{'bsb': 1990, 'westlift': 2000, 'pink floyd': 1995, 'atif islam': '2017'}
+Dic["atif islam"]
+'2017'
+del(Dic["bsb"])
+Dic
+{'westlift': 2000, 'pink floyd': 1995, 'atif islam': '2017'}
+Dic["bsb"] =
+SyntaxError: invalid syntax
+Dic["bsb"] ="1990"
+Dic
+{'westlift': 2000, 'pink floyd': 1995, 'atif islam': '2017', 'bsb': '1990'}
+"bsb" in Dic
+True
+Dic[1]
+Traceback (most recent call last):
+  File "<pyshell#60>", line 1, in <module>
+    Dic[1]
+KeyError: 1
+Dic.keys()
+dict_keys(['westlift', 'pink floyd', 'atif islam', 'bsb'])
+Dic.values()
+dict_values([2000, 1995, '2017', '1990'])
+
