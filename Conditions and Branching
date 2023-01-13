@@ -1,0 +1,58 @@
+branching#################
+
+age = 15
+
+if(age>18):
+    print("please enter the ac dc concert and meat loaf")
+elif(age==18):
+    print("please enter the pink floyed show")
+else:
+    print("move on kiddo")    
+    
+# age = 20
+# if(age>=18):
+#     print("please enter")
+# else:
+#     print("eat a snack and leave")    
+
+
+# ("ac/dc" == "mj")
+# if("mj" != "mj"):
+#     print("true")
+# else:
+#     print("false")
+
+
+
+############# else if ######## for cheking extra condtions
+
+# age = 15
+
+# if(age>18):
+#     print("please enter the ac dc concert and meat loaf")
+# elif(age==18):
+#     print("please enter the pink floyed show")
+# else:
+#     print("move on kiddo")        
+
+# age = 1
+
+# if(age>1980 ) and (age<1990):
+#     print("true")
+# else:
+#      print("false")    
+# i = 0
+# if(i!=0):
+#     print("true")
+# else:
+#     print("false")    
+
+x='a'
+
+if(x!='a'):
+
+  print("This is not a.")
+
+else:
+
+  print("This is a.")        
