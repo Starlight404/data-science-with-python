@@ -1,0 +1,26 @@
+# l = 10
+# def function(n):
+      # l = 5
+      # m = 8
+      # print("private variable printed",l,m)
+      # print(l)#now it has printed global variable
+# function("Local")
+# print(l)#here is the global variable 
+     
+# x ="AC"
+# def addDC(y):
+#       global x
+#       x = x + "DC"
+#       print(x)
+#       return(x)
+# z = addDC(x)      
+
+def thrillar():
+      date = 1985
+      return date
+
+
+date = 2005
+
+print(thrillar())##it will return local variable that had been decalred earlier.
+print(date)## this date is global variable
