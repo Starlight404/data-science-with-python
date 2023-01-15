@@ -1,0 +1,37 @@
+'''every object has 
+* a type
+* an internal data representation
+*a set of procedures for inetracting with the object(methods)
+*an object is an instance of a particular type'''
+
+# a = type({"dog": 50, "cat":100})
+# print (a)
+## a list or dict contains curly braces 
+### a list contains an array or third braces
+# a = [12,20,66,55,88,22,356,42,653,5]
+# a.reverse()
+# print (a)
+
+##class definition, name of the class, class parent
+
+
+# class circle(object):##define  my class
+#       def __init__(self, radius,color):##data attributes used to initializes each instance of the class
+#             ## init is constructor. its a special function that tekks python you are making a new class.
+#             self.radius = 30;
+#             self.color = "blue";
+
+# c1 =circle(10,"red")
+# c1.color ="green"
+# print(c1.radius)
+# print(c1.color)
+
+
+class rectangle(object):
+      def __init__(self, height, width, color):
+            self.height = 20;
+            self.width = 30;
+            self.color = "blue";
+a = rectangle(20, 30,"blue")
+
+print(a.height)
