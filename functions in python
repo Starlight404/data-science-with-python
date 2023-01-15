@@ -1,0 +1,15 @@
+###### Python functions ######
+
+# def add1(a):##first input 5 is passed on and a = 5
+      
+#       b = a+1 # sequence of command is runned and the value of a is 5
+#       return b ## value of b is 6
+# c = add1(100)   # where the function is called and user inputed a value of 5       
+# d = add1(500)
+# print(d)
+
+def Mult(a,b):
+      c =a*b
+      return c
+d = Mult(120,31.25)
+print(d)      
