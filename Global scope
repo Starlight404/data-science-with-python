@@ -15,12 +15,44 @@
 #       return(x)
 # z = addDC(x)      
 
-def thrillar():
-      date = 1985
-      return date
+#  def thrillar():
+#       date = 1985
+#       return date
 
 
-date = 2005
+# date = 2005
 
-print(thrillar())##it will return local variable that had been decalred earlier.
-print(date)## this date is global variable
+# print(thrillar())##it will return local variable that had been decalred earlier.
+# print(date)## this date is global variable
+
+# def Acdc(y):## here y =1 
+#       print(rating)
+#       return(rating + y)
+# rating =  15
+
+# z =Acdc(1)## user input 1
+
+# print (rating)
+
+# def pinkfloyed():## defined pinkfloyed
+#       global claimed###the keyword global claimed 
+#       claimed = "45 million"
+#       return claimed
+
+# pinkfloyed()###we called the function
+
+# print(claimed)      
+
+# # a =1
+# def add(b):
+#       return a + b
+# c = add(10)
+# print(c)      
+
+
+def f(*x):
+      return sum(x)
+
+c = f(2+5)
+
+print(c)
