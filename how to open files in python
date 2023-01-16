@@ -1,0 +1,20 @@
+# with open("C:/Users/Rahul/OneDrive/Desktop/data science 101/python file/sample3.txt", "r") as file1:
+#       file_cv = file1.read()
+#       print(file_cv)
+# print(file1.closed)
+# print(file_cv)      
+
+# with open("C:/Users/Rahul/OneDrive/Desktop/data science 101/python file/sample3.txt", "r") as file1:
+#       file_sample = file1.readline()
+#       print(file_sample)
+#       file_sample = file1.readline()
+#       print(file_sample)
+
+##using a loop to open the files
+
+# with open("C:/Users/Rahul/OneDrive/Desktop/data science 101/python file/sample3.txt", "r") as file1:
+#       for line in file1:
+#             print(line)
+# with open("C:/Users/Rahul/OneDrive/Desktop/data science 101/python file/sample3.txt", "r") as file1:
+#       file_sample = file1.readline(10)
+#       print(file_sample)
