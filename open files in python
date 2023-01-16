@@ -1,0 +1,83 @@
+# readfile = open("C:/Users/Rahul/OneDrive/Desktop/data science 101/python file/ext1.txt","r")
+
+
+# writefile = open("C:/Users/Rahul/OneDrive/Desktop/data science 101/python file/ext2.txt","w")
+
+
+# with open("C:/Users/Rahul/OneDrive/Desktop/data science 101/python file/ext1.txt","r") as readfile:
+#     file_read = readfile.read()
+#     print(file_read)
+
+# with open("C:/Users/Rahul/OneDrive/Desktop/data science 101/python file/ext2.txt","w") as writefile:
+#     for line in readfile:
+#         write_new = writefile.write(line)
+#         print(writefile)
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # File1 = open("C:/Users/Rahul/OneDrive/Desktop/data science 101/python file/pythonWriting.txt","a")
+# # Line = ["this is line Aaaaaa\n","this is line B \n", "this is line C\n"]
+
+# # with open("C:/Users/Rahul/OneDrive/Desktop/data science 101/python file/pythonWriting.txt","a") as File1:
+# #      b =  File1.write("this is line AAAAAAAAAAAAA\n")
+# #      print (b)
+    
+    
+#     # for lines in Line:
+#     #     a= File1.write(str(Line))
+#     #     print(a)
+    
+    
+    
+    
+#     # File1.write("this is new line A")
+#     # File1.write("this is new line B")
+    
+
+
+# # file = open ("C:/Users/Rahul/OneDrive/Desktop/data science 101/python file/python1.txt","r")
+
+# # with open("C:/Users/Rahul/OneDrive/Desktop/data science 101/python file/python1.txt")as file:
+# #     file_char  = file.readline(5)
+# #     print(file_char)
+
+
+
+#     # for line in file:
+#     #     print(line)
+    
+    
+#     # file_read = file.readline()
+#     # # print(file_read)
+#     # print(file.closed)
+#     # print(file_read)
