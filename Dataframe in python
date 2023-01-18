@@ -1,0 +1,34 @@
+import pandas as pd
+# csv_path = ("E:\\dataset\\student.csv" )
+
+# # df = pd.read_csv(csv_path)
+
+# csv_path2 = ("E:\\dataset\\student.xlsx")
+# df2 = pd.read_excel(csv_path2)
+# # print(df2)
+# print(df2.head())####this command is show the first 5 row and coloumn in the dataframe
+
+
+# file_data=pd.read_csv(path_to_file, encoding="utf-8")
+
+### how to build up a dataframe using dictionary
+
+
+student = {"name":["Rahul", "Ratul", "Sanzid", "lisa apu","joti"],"Id": [230312,230314,230315,230316,230317],
+"contact":["ct-1","ct-2","ct-3","ct-4","ct-5"],"grade":[4,3.25,3.50,3.26,3.25]}
+'''
+here name:key , rahul:value'''
+
+student_profile = pd.DataFrame(student)
+
+print(student_profile)
+
+
+x= student_profile[["grade"]]##for adding a new dataframe
+print(x)
+
+###### for accesing data frames ########
+
+
+y = student_profile.iloc[0,0]
+print(y)
