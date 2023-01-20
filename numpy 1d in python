@@ -1,0 +1,32 @@
+## learing with Numpy  1D   ###
+
+### objectives ####
+
+## the basics of array creation
+## indexing and slicing 
+## basic operations
+## universal functions
+import numpy as np
+
+# a =np.array([0,11,2,3,4])
+# print(a)
+# print(a[1])##for accessing the numpy
+# print(a.size)## for determing the size of the array
+# print(a.dtype)
+# x = type(a)## for finding the type
+# print(x)
+
+# print(a.ndim)## ndim represents the number of array dimention or the rank of the array. in this case which is " 1 " 
+
+# print(a.shape)## the attribute shape is tuple of integers indicating the size of the array in each dimention
+# b = np.array([3.1,5.66,33.22,6.99,6.56,3.14,3.20])
+# print(b.dtype)
+
+### for indexing and slicing #######
+c =np.array([20,30,200,350,4000])
+
+
+# print(c)
+d =c[1:4]## for slicing the array
+c[1:4] = 100,101,102
+print(d)
