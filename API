@@ -1,0 +1,65 @@
+############ API Or Application programme interface ###############
+### Outline 
+'''
+what is an api
+api libraries
+Rest api
+request and response
+
+
+
+An API lets two pieces of software talk to each other.
+
+REST APIs are another popular type of API; they allow you to communicate through the
+internet allowing you to take advantage of resources like storage, access more data,
+The RE stands for Representational, the S stands for State, the T stand for Transfer.
+
+
+Rest apis are ussed to interect with web services,
+applications that you call through the internet
+they have set of rules regarding:
+1.communication
+2.Input or request 
+3. output or response
+ '''
+# import requests
+
+# response = requests.get("'https://api-nba-v1.p.rapidapi.com/seasons")
+# # print(response.status_code)####### if it returns 200 that means its okay to work with
+# # print(response.text)#this will return string  not a dictionary|| {"image":"https:\/\/randomfox.ca\/images\/19.jpg","link":"https:\/\/randomfox.ca\/?i=19"}
+# # print(response.json())## this time it will return dictionary that we are actually going to use ||{'image': 'https://randomfox.ca/images/24.jpg', 'link': 'https://randomfox.ca/?i=24'}
+# fox =  (response.json())
+# print(fox["image"])### for returning the value of the dictionary which is image
+
+
+from nba_api.stats.static import teams
+nba_teams = teams.get_teams()
+print(nba_teams[:5])
+
+###### making table from the api #########
+import pandas as pd
+def one_dict(list_dict):
+    keys = list_dict[0].keys()
+    out_dict = {key:[]for key in keys}
+    for dict_ in list_dict:
+        for key,value in dict_.items():
+            out_dict[key].append(value)
+    return out_dict 
+
+dict_nba_team = one_dict(nba_teams)        
+
+df_teams = pd.DataFrame(dict_nba_team)
+# x = df_teams.head()
+# print(x)
+df_warriors = df_teams[df_teams['nickname']=='Warriors']
+# print(df_warriors)
+
+### finding the id #######
+id_warriors = df_warriors[['id']].values[0][0]
+print(id_warriors)####### 1610612744 #######
+
+from nba_api.stats.endpoints import leaguegamefinder
+gamefinder = leaguegamefinder.LeagueGameFinder(team_id_nullable=id_warriors)
+
+games = gamefinder.get_data_frames()[0]
+print(games.head())
