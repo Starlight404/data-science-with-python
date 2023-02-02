@@ -1,0 +1,56 @@
+######### project 2 ########
+import pandas as pd
+
+df = pd.read_csv("C://Users//Rahul//OneDrive//Desktop//data science 101//python file//Bengaluru_House_Data.csv")
+
+x = df.head()
+y = df.isnull().sum().sum()
+# print(y)
+
+
+
+###### filling null values ########
+df2 =df.fillna(value=0) 
+print(df2)
+a = df2.isnull().sum().sum()
+
+# print(a)
+
+
+
+### filin null values with a previous value #######
+
+df3= df.fillna(method='pad')
+
+print(df3)
+
+b =  df3.isnull().sum()
+
+
+print(b)
+
+
+######## filling nul values with the upcoming value ######
+
+df4 = df.fillna(method='bfill')## bfill = backword fill!!! this was done for row value
+
+print(df4)
+
+c = df4.isnull().sum()
+
+print(c)
+
+
+########### fill nul values with coloumn before column value #######
+
+df5 = df.fillna(method='pad',axis=1)
+
+print(df5)
+
+###### fill in vlaues after column value #####
+
+df6 = df.fillna(method='bfill',axis=1)
+
+print(df6) 
+
+
