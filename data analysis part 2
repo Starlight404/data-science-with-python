@@ -1,0 +1,38 @@
+##### first project [predicting prices on used cars] ###
+
+import pandas as pd
+url = "https://archive.ics.uci.edu/ml/machine-learning-databases/autos/imports-85.data"
+df = pd.read_csv(url, header = None)
+
+headers = ["symboling","normalized-loss","make","fuel-tyoe","aspiration","num-of-doors","body-styles","drive-wheels","engine-location","wheel-base","length","width","height","curb-weight","engine-type","number-of-cylinders","engine-size","fuel-system","bore","storke","compression-ratio","horsepower","peak-Rpm","city-mpg","highway-mpg","price"]
+df.columns = headers
+x = df.head(30)
+print(x)
+path = "C://Users//Rahul//OneDrive//Desktop//data science 101//python file//autombole.csv"
+df.to_csv(path)
+a = df.isnull().sum()
+print(a)
+## how to handle with missing values #####
+df.dropna(subset=["price"],axis=0)
+x = df.dropna(subset=["price"],axis=0,inplace=True)
+mean = df["height"].mean()
+print(mean)
+
+'''
+axis = 0 drops the row
+axis = 1 drop the entire coloumn
+
+
+check with the data collection source
+drop the missing values
+drop the variable
+drop the data entry which is the best
+'''
+'''
+replace the missing values
+replace with an avarage(of similar datapoints
+replace it by frequency
+replace it based other function'''
+
+
+
