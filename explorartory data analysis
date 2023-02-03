@@ -1,0 +1,40 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+df = pd.read_csv("C://Users//Rahul//OneDrive//Desktop//data science 101//python file//germany-cars-zenrows.csv")
+### for scatter plot ###########
+print(df["price"])
+x =df['hp']
+y= (df['price'])
+
+plt.title("scatterplot of hp vs price")
+plt.xlabel("hp")
+plt.ylabel("price")
+plt.scatter(x,y)
+plt.show()
+
+
+
+
+# drive_wheels_counts = df["drive-wheels"].value_counts()
+# drive_wheels_counts.rename(index={'drive-wheels':'value_counts'}, inplace=True)
+# drive_wheels_counts.index.name = 'drive-wheels'
+
+# # print(drive_wheels_counts)
+# grouped = df.groupby("drive-wheels")
+
+# plt.figure()
+# sns.boxplot(x="drive-wheels", y="price", data=df)
+# plt.show()
+
+
+# df = pd.read_csv("C://Users//Rahul//OneDrive//Desktop//data science 101//python file//Bengaluru_House_Data.csv")
+
+# total_sqft_counts = df["total_sqft"].value_counts()
+# total_sqft_counts.rename(index={'total_sqft':'value_counts'}, inplace=True)
+
+# total_sqft_counts.index.name = 'total_sqft'
+# sns.boxplot(x="total_sqft", y="price", data=df)
+# plt.show()
