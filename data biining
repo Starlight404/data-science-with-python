@@ -1,0 +1,26 @@
+
+'''
+Binning is when you group values together into bins. For example, you can bin “age”
+into [0 to 5], [6 to 10], [11 to 15] and so on.
+Sometimes, binning can improve accuracy of the predictive models.
+it converts numeric into categorical variables
+group a set of numerical values into a set of bins'''
+
+import pandas as pd
+import numpy as np
+
+import matplotlib.pyplot as plt
+
+# df = pd.read_csv("C://Users//Rahul//OneDrive//Desktop//data science 101//python file//autombole.csv")
+
+df = pd.read_csv("C://Users//Rahul//OneDrive//Desktop//data science 101//python file//Bengaluru_House_Data.csv")
+
+bins = np.linspace(min(df["price"]),max(df["price"]),4)
+
+group_names = ["Low","Medium","High"]
+
+df["price-binned"]= pd.cut(df["price"],bins,labels=group_names,include_lowest=True)
+
+x= plt.hist(df["price-binned"],bins=4)
+
+plt.show()
