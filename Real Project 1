@@ -1,0 +1,42 @@
+## q-1 what was the best month for sales? how much was the earned that month?
+
+
+import pandas as pd
+
+## merge  the 12 months sales into a single csv file
+import os
+df = pd.read_csv("./Sales_Data/Sales_April_2019.csv")
+
+files = [file for file in os.listdir('./Sales_Data')]
+
+all_months_data = pd.DataFrame()
+
+for file in files:
+    df = pd.read_csv("./Sales_Data/"+file)
+    all_months_data = pd.concat([all_months_data,df])
+    
+all_months_data.to_csv("all_data.csv", index= False)    
+all_data = pd.read_csv("all_data.csv")
+all_data.head()
+### clean up the data
+### drop rows of Nan
+nan_df = all_data[all_data.isna().any(axis=1)]
+nan_df.head()
+
+
+all_data = all_data.dropna(how='all')
+all_data.head()
+## find or and Delete it
+all_data = all_data[all_data['Order Date'].str[0:2]!='Or']
+### convert coloumns to the correct types
+all_data['Quantity Ordered']= pd.to_numeric(all_data['Quantity Ordered']) #make int
+all_data['Price Each']= pd.to_numeric(all_data['Price Each'])
+#Augment data with additional coloumns
+## Task 2: add month coloumn
+all_data['Month'] = all_data['Order Date'].str[0:2]
+all_data['Month'] = all_data['Month'].astype('int32')
+all_data.head()
+## task 3 : add a sales column
+
+all_data['Sales'] = all_data['Quantity Ordered']* all_data['Price Each']
+all_data.head()
