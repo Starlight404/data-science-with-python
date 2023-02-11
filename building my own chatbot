@@ -13,8 +13,8 @@ raw_doc = raw_doc.lower()
 sent_tokens = nltk.sent_tokenize(raw_doc)
 word_sent = nltk.word_tokenize(raw_doc)
 
-print(sent_tokens[:2])
-print(word_sent[:2])
+# print(sent_tokens[:2])
+# print(word_sent[:2])
 
 
 ### for data preprocessing #########
@@ -57,3 +57,29 @@ def response(user_response):
     else:
         robo1_response  = robo1_response+ sent_tokens[idx]
         return robo1_response    
+
+
+######### defining coversation ####### start/ end protocols
+
+flag = True
+print("BOT: My name is Milo. Lets have a conversation!! Also, If you want to exit anytime, just say Bye")
+while(flag == True):
+    user_response = input()
+    user_response = user_response.lower()
+    if(user_response!='bye'):
+        if(user_response=='thanks'or user_response =='thank you'):
+            flag = False
+            print("BOT:you are welcome.....")
+        else:
+            if(greet(user_response)!=None):
+                print("BOT : "+ greet(user_response))
+            else:
+                sent_tokens.append(user_response)
+                word_tokens = word_tokens +nltk.word_tokenize(user_response)
+                final_words = list(set(word_tokens))
+                print("BOT: ",end="")
+                print(response(user_response))
+                sent_tokens.remove(user_response)
+    else:
+        flag = False 
+        print("BOT: GOOD BYE! TAKE CARE <3")
