@@ -1,0 +1,252 @@
+
+##Loan data analysis based on credit card and pupose
+
+# Load dataset
+import pandas as pd
+
+df = pd.read_csv('loan_data.csv')
+df.head()
+
+# Quick exploration
+
+df.info()
+
+## Data dictionary
+
+|    | Variable          | Explanation                                                                                                             |
+|---:|:------------------|:------------------------------------------------------------------------------------------------------------------------|
+|  0 | credit_policy     | 1 if the customer meets the credit underwriting criteria; 0 otherwise.                                                  |
+|  1 | purpose           | The purpose of the loan.                                                                                                |
+|  2 | int_rate          | The interest rate of the loan (more risky borrowers are assigned higher interest rates).                                |
+|  3 | installment       | The monthly installments owed by the borrower if the loan is funded.                                                    |
+|  4 | log_annual_inc    | The natural log of the self-reported annual income of the borrower.                                                     |
+|  5 | dti               | The debt-to-income ratio of the borrower (amount of debt divided by annual income).                                     |
+|  6 | fico              | The FICO credit score of the borrower.                                                                                  |
+|  7 | days_with_cr_line | The number of days the borrower has had a credit line.                                                                  |
+|  8 | revol_bal         | The borrower's revolving balance (amount unpaid at the end of the credit card billing cycle).                           |
+|  9 | revol_util        | The borrower's revolving line utilization rate (the amount of the credit line used relative to total credit available). |
+| 10 | inq_last_6mths    | The borrower's number of inquiries by creditors in the last 6 months.                                                   |
+| 11 | delinq_2yrs       | The number of times the borrower had been 30+ days past due on a payment in the past 2 years.                           |
+| 12 | pub_rec           | The borrower's number of derogatory public records.                                                                     |
+| 13 | not_fully_paid    | 1 if the loan is not fully paid; 0 otherwise.   
+
+
+# Encode the purpose field
+
+pre_df = pd.get_dummies(df,columns=['purpose'])
+pre_df.head()
+
+from sklearn.model_selection import train_test_split
+
+X = pre_df.drop('purpose_credit_card', axis=1)
+y = pre_df['purpose_credit_card']
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=0.44, random_state=126
+)
+
+from sklearn.naive_bayes import GaussianNB
+
+model = GaussianNB()
+
+model.fit(X_train, y_train);
+
+from sklearn.metrics import (
+    accuracy_score,
+)
+
+y_pred = model.predict(X_test)
+
+accuray = accuracy_score(y_pred, y_test)
+
+
+print("Accuracy:", accuray)
+
+Accuracy: 0.8734577665295793
+
+############ PURPOSE SMALL BUISNESS ###############
+# Load dataset
+import pandas as pd
+
+df = pd.read_csv('loan_data.csv')
+df.head()
+
+# Quick exploration
+
+df.info()
+
+# Encode the purpose field
+
+pre_df = pd.get_dummies(df,columns=['purpose'])
+pre_df.head()
+
+from sklearn.model_selection import train_test_split
+
+X = pre_df.drop('purpose_small_business', axis=1)
+y = pre_df['purpose_small_business']
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=.33, random_state=124
+)
+
+from sklearn.naive_bayes import GaussianNB
+
+model = GaussianNB()
+
+model.fit(X_train, y_train);
+
+from sklearn.metrics import (
+    accuracy_score,
+)
+
+y_pred = model.predict(X_test)
+
+accuray = accuracy_score(y_pred, y_test)
+
+
+print("Accuracy:", accuray)
+
+
+Accuracy: 0.920911104080987
+
+
+################# EDUCATIONAL PURPOSE #############
+
+# Load dataset
+import pandas as pd
+
+df = pd.read_csv('loan_data.csv')
+df.head()
+
+# Quick exploration
+
+df.info()
+
+# Encode the purpose field
+
+pre_df = pd.get_dummies(df,columns=['purpose'])
+pre_df.head()
+
+from sklearn.model_selection import train_test_split
+
+X = pre_df.drop('purpose_educational', axis=1)
+y = pre_df['purpose_educational']
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=.36, random_state=125
+)
+
+from sklearn.naive_bayes import GaussianNB
+
+model = GaussianNB()
+
+model.fit(X_train, y_train);
+
+from sklearn.metrics import (
+    accuracy_score,
+)
+
+y_pred = model.predict(X_test)
+
+accuray = accuracy_score(y_pred, y_test)
+
+
+print("Accuracy:", accuray)
+
+Accuracy: 0.9625978544505653
+
+
+################  DEBT Consolidation ##############
+
+# Load dataset
+import pandas as pd
+
+df = pd.read_csv('loan_data.csv')
+df.head()
+
+# Quick exploration
+
+df.info()
+
+# Encode the purpose field
+
+pre_df = pd.get_dummies(df,columns=['purpose'])
+pre_df.head()
+
+from sklearn.model_selection import train_test_split
+
+X = pre_df.drop('purpose_debt_consolidation', axis=1)
+y = pre_df['purpose_debt_consolidation']
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=.38, random_state=124
+)
+
+from sklearn.naive_bayes import GaussianNB
+
+model = GaussianNB()
+
+model.fit(X_train, y_train);
+
+from sklearn.metrics import (
+    accuracy_score,
+)
+
+y_pred = model.predict(X_test)
+
+accuray = accuracy_score(y_pred, y_test)
+
+
+print("Predicated Score:", accuray)
+
+
+Predicated Score: 0.6513736263736264
+
+
+### PURPOSE HOME IMPROVENT ##############
+
+# Load dataset
+import pandas as pd
+
+df = pd.read_csv('loan_data.csv')
+df.head()
+
+# Quick exploration
+
+df.info()
+
+# Encode the purpose field
+
+pre_df = pd.get_dummies(df,columns=['purpose'])
+pre_df.head()
+
+from sklearn.model_selection import train_test_split
+
+X = pre_df.drop('purpose_home_improvement', axis=1)
+y = pre_df['purpose_home_improvement']
+
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=.33, random_state=125
+)
+
+from sklearn.naive_bayes import GaussianNB
+
+model = GaussianNB()
+
+model.fit(X_train, y_train);
+
+from sklearn.metrics import (
+    accuracy_score,
+)
+
+y_pred = model.predict(X_test)
+
+accuray = accuracy_score(y_pred, y_test)
+
+
+print("Predicated Score:", accuray)
+
+
+Predicated Score: 0.9262891490034799
+
+
